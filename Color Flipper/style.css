@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Open Sans, sans-serif;
+    height: 100vh;
+    background: black;
+    color: white;
+    display: grid;
+    place-items: center;
+    /* cursor: none; */
+}
+.container{
+    margin: 200px;
+}
+.container h2{
+    font-size: 4rem;
+    margin: 0;
+}
+h4{
+    font-size: 25px;
+    line-height: 1.7;
+}
+.btn{
+    font-family: Open Sans, sans-serif;
+    font-size: 15px;
+    width: 100px;
+    height: 50px;
+    border-radius: 10%;
+    background: white;
+    color: black;
+}

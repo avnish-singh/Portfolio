@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avnish Singh's Portfolio</title>
+</head>
+<style>
+    
+body{
+    font-family: Open Sans, sans-serif;
+    height: 100vh;
+    background: black;
+    color: white;
+    display: grid;
+    place-items: center;
+    cursor: none;
+}
+.content{
+    margin: 200px;
+}
+.content h1{
+    font-size: 6rem;
+    margin: 0;
+}
+.content p{
+    font-size: 18px;
+    line-height: 1.7;
+}
+[class^="cursor"]{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.cursor-outer{
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    transition: all .08s ease-out;
+}
+
+.cursor-inner{
+    width: 7px;
+    height: 7px;
+    background: white;
+}
+
+.content:hover ~ .cursor-outer{
+    width: 90px;
+    height: 90px;
+    background: #fff;
+    color: black;
+    mix-blend-mode: difference;
+}
+
+.content:hover ~ .cursor-inner{
+    opacity: 0;
+}
+</style>
+<body>
+    <div class="content">
+        <p>Avnish Singh</p>
+        <h1>Web Developer</h1>
+        <p>Hello, Avnish Singh here. I'm a Front-End Web Developer, Who like to built the websites more attractive and responsive.</p>
+    </div>
+    <div class="cursor-outer"></div>
+    <div class="cursor-inner"></div>
+    <script>
+        const cursor = document.querySelector(".cursor-inner");
+        const cursor2 = document.querySelector(".cursor-outer");
+        document.addEventListener("mousemove", e=>{
+            cursor.style.top = e.pageY + 'px';
+            cursor.style.left = e.pageX + 'px';
+
+            cursor2.style.top = e.pageY + 'px';
+            cursor2.style.left = e.pageX + 'px';
+        });
+    </script>
+</body>
+</html>
